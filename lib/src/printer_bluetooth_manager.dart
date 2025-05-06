@@ -186,7 +186,7 @@ class PrinterBluetoothManager {
       bool connectionSucceeded = false;
       try {
         await _bluetoothManager.connect(_selectedPrinter!._device).timeout(
-          Duration(seconds: 5),
+          Duration(seconds: 15),
           onTimeout: () {
             throw TimeoutException('Connection timed out');
           },
